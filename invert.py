@@ -1,7 +1,9 @@
 from __future__ import print_function
 
 def invertPath(color1,color2,start,coloredG,edgeColor):
+    #Switches the colors of adjacent edges in a single path
     def switchColors(vertex1,vertex2):
+        #Switch the color of a given edge
         if edgeColor[(vertex1,vertex2)] == color1: newColor = color2
         elif edgeColor[(vertex1,vertex2)] == color2: newColor = color1
         edgeColor[(vertex1,vertex2)] = newColor
@@ -26,4 +28,4 @@ for key in color.keys():
     color[(key[1],key[0])] = color[key]
 print(color)
 invertPath("Red","Green",0,coloredG,color)
-print(color) #the edges (0,4) (4,0) (4,400) and (400,4) should have been switched
+print(color) #the colors of edges (0,4) (4,0) (4,400) and (400,4) should be switched
