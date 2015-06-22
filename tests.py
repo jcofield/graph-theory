@@ -8,7 +8,7 @@ colorsOfGraph = mgColor(vertices,edges)
 print("Final coloring: %s"%colorsOfGraph) #Easy to check that this is proper by inspection
 print("--------------------------------------------------------------")
 
-# Test full algorithm on a small graph
+# Test full algorithm on a random graph
 vertices = range(0,100)
 #Randomly connect 1/34 of all possible edges
 edges = [(i,j) for i in vertices for j in vertices if i<j if not random.randrange(35)]
